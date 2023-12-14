@@ -1,21 +1,67 @@
+#include <string>
 #include <iostream>
 
-void install() {
+void install() 
+{
 
     char install_choice;
+    std::string supplier, part_manufacturer, part_name, serial_num, model_num, purchase_date;
+
+
 
     std::cout << std::endl << "Are you adding a part? (y/n) ";
     std::cin >> install_choice;
+    std::cin.ignore(1, '\n');
+    std::cout << std::endl;
 
+    while (install_choice == 'y')
+    {
+        std::cout << "Please provide the following:\n\n";
+
+        std::cout << "Supplier Name: ";
+        std::getline(std::cin, supplier);
+
+        std::cout << "Part Manufacturer: ";
+        std::getline(std::cin, part_manufacturer);
+
+        std::cout << "Part Name: ";
+        std::getline(std::cin, part_name);
+
+        std::cout << "Serial Number: ";
+        std::getline(std::cin, serial_num);
+
+        std::cout << "Model Number: ";
+        std::getline(std::cin, model_num);
+
+        std::cout << "Purchase Date: ";
+        std::getline(std::cin, purchase_date);
+
+        std::cout << std::endl;
+        std::cout << "Supplier Name: " << supplier << std::endl;
+        std::cout << "Part Manufacturer: " << part_manufacturer << std::endl;
+        std::cout << "Part Name: " << part_name << std::endl;
+        std::cout << "Serial Number: " << serial_num << std::endl;
+        std::cout << "Model Number: " << model_num << std::endl;
+        std::cout << "Purchase Date: " << purchase_date << std::endl;
+
+        std::cout << std::endl << "Edit the above information? (y/n) ";
+        std::cin >> install_choice;
+        std::cout << std::endl;
+    }
+
+    std::cout << "The part has been filed!\n";
+    std::cout << "Have a nice day!\n\n";
 }
 
-void warehouse() {
+void warehouse() 
+{
 
     std::cout << "warehouse function";
 
 }
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const *argv[]) 
+{
 
     int user;
     
@@ -24,15 +70,18 @@ int main(int argc, char const *argv[]) {
 
     std::cin >> user;
 
-    if (user > 2) {
+    if (user > 2) 
+    {
 
         std::cout << "Invalid input.";
 
-    } else if (user == 1) {
+    } else if (user == 1) 
+    {
 
         install();
 
-    } else {
+    } else 
+    {
 
         warehouse();
 
