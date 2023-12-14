@@ -1,11 +1,13 @@
-#include <string>
 #include <iostream>
+#include <fstream>
+#include <string>
 
 void install() 
 {
 
     char install_choice;
     std::string supplier, part_manufacturer, part_name, serial_num, model_num, purchase_date;
+    std::string file_name = "Invoices//";
 
 
 
@@ -48,6 +50,10 @@ void install()
         std::cin >> install_choice;
         std::cout << std::endl;
     }
+
+    file_name += serial_num + ".txt";
+
+    std::ofstream invoice_file(file_name);
 
     std::cout << "The part has been filed!\n";
     std::cout << "Have a nice day!\n\n";
