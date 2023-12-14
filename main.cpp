@@ -55,6 +55,15 @@ void install()
 
     std::ofstream invoice_file(file_name);
 
+    invoice_file << "Supplier Name: " << supplier << std::endl;
+    invoice_file << "Part Manufacturer: " << part_manufacturer << std::endl;
+    invoice_file << "Part Name: " << part_name << std::endl;
+    invoice_file << "Serial Number: " << serial_num << std::endl;
+    invoice_file << "Model Number: " << model_num << std::endl;
+    invoice_file << "Purchase Date: " << purchase_date << std::endl;
+
+    invoice_file.close();
+
     std::cout << "The part has been filed!\n";
     std::cout << "Have a nice day!\n\n";
 }
