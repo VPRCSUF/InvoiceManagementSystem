@@ -2,8 +2,11 @@
 
 void install() {
 
-    std::cout << "install function";
-    
+    char install_choice;
+
+    std::cout << std::endl << "Are you adding a part? (y/n) ";
+    std::cin >> install_choice;
+
 }
 
 void warehouse() {
