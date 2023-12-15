@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 #include <string>
 
 void install() 
@@ -13,10 +14,11 @@ void install()
     std::cout << std::endl << "Are you adding a part? (y/n) ";
     std::cin >> install_choice;
     std::cin.ignore(1, '\n');
-    std::cout << std::endl;
 
     while (install_choice == 'y')
     {
+        system("cls");
+        
         std::string file_name = "Invoices//";
 
         std::cout << "==================================================================================================================\n";
@@ -39,9 +41,10 @@ void install()
 
         std::cout << "Purchase Date: ";
         std::getline(std::cin, purchase_date);
-        std::cout << "==================================================================================================================\n";
 
-        std::cout << std::endl;
+        system("cls");
+
+        std::cout << "==================================================================================================================\n";
         std::cout << "Supplier Name: " << supplier << std::endl;
         std::cout << "Part Manufacturer: " << part_manufacturer << std::endl;
         std::cout << "Part Name: " << part_name << std::endl;
@@ -52,7 +55,8 @@ void install()
 
         std::cout << std::endl << "Edit the above information? (y/n) ";
         std::cin >> install_choice;
-        std::cout << std::endl;
+        
+        system("cls");
 
         file_name += serial_num + ".txt";
 
@@ -67,21 +71,23 @@ void install()
 
         invoice_file.close();
 
-        std::cout << std::endl;
+        std::cout << "==================================================================================================================\n";
         std::cout << "The part has been filed!\n";
         std::cout << "Would you like to add another part? (y/n) ";
         std::cin >> install_choice;
         std::cin.ignore(1, '\n');
     }
 
-    std::cout << "****************\n";
-    std::cout << "Have a nice day!\n\n";
+    std::cout << "================\n";
+    std::cout << "Have a nice day!\n";
+    std::cout << "================\n";
 }
 
 void warehouse() 
 {
 
-    std::cout << "warehouse function";
+    std::cout << std::endl;
+    std::cout << "Hello";
 
 }
 
@@ -101,6 +107,8 @@ int main(int argc, char const *argv[])
 
 
         std::cin >> user;
+
+        system("cls");
 
         if (user > 3) 
         {
