@@ -18,7 +18,7 @@ void install()
     while (install_choice == 'y')
     {
         system("cls");
-        
+
         std::string file_name = "Invoices//";
 
         std::cout << "==================================================================================================================\n";
@@ -78,9 +78,9 @@ void install()
         std::cin.ignore(1, '\n');
     }
 
-    std::cout << "================\n";
-    std::cout << "Have a nice day!\n";
-    std::cout << "================\n";
+    system("cls");
+    
+    std::cout << "***Have a nice day!***\n";
 }
 
 void warehouse() 
