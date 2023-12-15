@@ -89,30 +89,36 @@ int main(int argc, char const *argv[])
 {
 
     int user;
+
+    while (user != 3)
+    {
     
-    std::cout << "==================================================================================================================\n";
-    std::cout << "1. Install\n" << std::endl
-              << "2. Warehouse\n" << std::endl;
-    std::cout << "==================================================================================================================\n";
+        std::cout << "==================================================================================================================\n";
+        std::cout << "1. Install\n" << std::endl
+                  << "2. Warehouse\n" << std::endl
+                  << "3. Exit\n" << std::endl;
+        std::cout << "==================================================================================================================\n";
 
 
-    std::cin >> user;
+        std::cin >> user;
 
-    if (user > 2) 
-    {
+        if (user > 3) 
+        {
 
-        std::cout << "Invalid input.";
+            std::cout << "Invalid input.\n";
+            return 1;
 
-    } else if (user == 1) 
-    {
+        } else if (user == 1) 
+        {
 
-        install();
+            install();
 
-    } else 
-    {
+        } else if (user == 2)
+        {
 
-        warehouse();
+            warehouse();
 
+        }
     }
 
     return 0;
